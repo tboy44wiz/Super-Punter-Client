@@ -1,0 +1,29 @@
+@import "src/assets/styles/GlobalStyle";
+
+.AppHeaderComp {
+  height: 80px;
+  width: $fullWidth;
+  // border-bottom: 1px solid $lineColor;
+
+  position: fixed;
+  z-index: 1000;
+
+  .nav__wrapper {
+    // height: $fullHeight;
+    background: linear-gradient(rgba(0, 37, 36, 0.5), rgba(0, 37, 36, 0.5)),
+    url("../../../assets/images/banner_bg.png") center no-repeat #004547cc;
+    background-size: cover;
+    padding: 0 40px;
+
+    .brand_logo {
+      height: 80px;
+      width: 150px;
+      background: url("../../../assets/images/app_logo_2.png") no-repeat center;
+      background-size: contain;
+    };
+
+    .nav-link {
+      color: $colorWhite;
+    };
+  }
+};

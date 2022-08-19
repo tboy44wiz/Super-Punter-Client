@@ -1,0 +1,159 @@
+@import "../../../../assets/styles/GlobalStyle";
+
+.WorkFlowComp {
+    background: url("../../../../assets/images/patternBG.png") center no-repeat #004b4ecc;
+    background-size: cover;
+    color: $colorWhite;
+    padding: 100px 0;
+
+    .workflow__wrapper {
+        .workflow__colume {
+            position: relative;
+
+            &::before {
+                content: "";
+                height: 60px;
+                width: 245px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                opacity: 0.3;
+
+                position: absolute;
+                top: 0;
+                left: 82px;
+            };
+            &:nth-of-type(2n-1)::before {
+                background-image: url("../../../../assets/images/arrow_odd.png");
+                top: -10px;
+            };
+            &:nth-of-type(2n)::before {
+                background-image: url("../../../../assets/images/arrow_even.png");
+                top: 17px;
+            };
+            &:last-child::before {
+              display: none;
+            };
+
+            .data__number {
+                height: 65px;
+                width: 65px;
+                background: $colorWhite;
+                border-radius: 25px;
+                color: $primaryColor;
+                font-size: 3rem;
+                font-weight: 600;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            };
+                
+            .title-body__wrapper {            
+                .title {
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: $subHeading;
+                    font-weight: 500;
+                    margin: 20px 0;
+                };
+                .body {
+                    color: $lineColor;
+                    font-family: 'Barlow', sans-serif;
+                };
+            };
+        };
+    };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+// XX-Large devices (larger desktops, 1400px and up "xxl")
+@media (max-width: 1400px) {
+    .WorkFlowComp {    
+        .workflow__wrapper {
+            .workflow__colume {
+                &::before {
+                    content: "";
+                    height: 60px;
+                    width: 200px;
+    
+                    position: absolute;
+                    top: 0;
+                    left: 83px;
+                };
+            };
+        };
+    };
+};
+
+// X-Large devices (large desktops, 1200px and up "xl")
+@media (max-width: 1200px) {
+    .WorkFlowComp {    
+        .workflow__wrapper {
+            .workflow__colume {
+                &::before {
+                    content: "";
+                    height: 60px;
+                    width: 160px;
+    
+                    position: absolute;
+                    top: 0;
+                    left: 80px;
+                };
+            };
+        };
+    };
+};
+
+// Large devices (desktops, 992px and up "lg")
+@media (max-width: 992px) {
+    .WorkFlowComp {    
+        .workflow__wrapper {
+            .workflow__colume {
+                &::before {
+                    display: none;
+                };
+            };
+        };
+    };
+};
+
+// Medium devices (tablets, 768px and up "md")
+@media (max-width: 768px) { 
+    .WorkFlowComp {    
+        .workflow__wrapper {
+            .workflow__colume {
+                display: flex;
+                gap: 20px;
+
+                &::before {
+                    display: none;
+                };
+            
+                .data__number {
+                };
+                
+                .title-body__wrapper {
+                    width: 80%;
+
+                    .title {
+                    };
+                    .body {
+                    };
+                };
+            };
+        };
+    };
+};
+
+// Small devices (landscape phones, 576px and up "sm")
+@media (max-width: 576px) { };

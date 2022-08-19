@@ -1,0 +1,268 @@
+@import "../../../../assets/styles/GlobalStyle";
+
+.AboutComp {
+    // height: 800px;
+    padding: 100px 10px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        height: 50%;
+        width: 45%;
+        background: #f8f9ff;
+        border-radius: 0 50% 50% 0;
+        z-index: -1;
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    };
+
+    .main__wrapper {
+        z-index: 10;
+
+        .about__wrapper {
+
+            .about-left__wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                .phone-mockup__image {
+                    height: auto;
+                    width: 80%
+                };
+            };
+
+            .about-right__wrapper {
+                padding-left: 70px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                .header__wrapper {
+                    .sub__title {
+                        font-family: 'Barlow', sans-serif;
+                        font-size: $fontSize;
+                        font-weight: 500;
+                        letter-spacing: 5px;
+                    };
+                    .title {
+                        font-family: 'Ubuntu', sans-serif;
+                        font-size: $heading;
+                        font-weight: 500
+                    };
+                };
+
+                .about__paragraph {
+                    margin-top: 20px
+                };
+
+                .mission-icon__wrapper, .vision-icon__wrapper {
+                    height: 55px;
+                    width: 55px;
+                    border-radius: 25px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .mission-vision__icon {
+                        font-size: 3rem;
+                    };
+                };
+                .mission-icon__wrapper {
+                    background: rgba(144, 188, 238, 0.5);
+                };
+                .vision-icon__wrapper {
+                    background: rgba(255, 0, 0, 0.3);
+                };
+
+                .mission-vision__body {
+                    .title {
+                        font-family: 'Ubuntu', sans-serif;
+                        font-size: $subHeading;
+                        font-weight: 500;
+                    };
+                };
+            };
+        };
+    };
+    
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// XX-Large devices (larger desktops, 1400px and up "xxl")
+@media (max-width: 1400px) {
+    .AboutComp {
+        .main__wrapper {
+            .about__wrapper {
+                .about-left__wrapper {
+                    .phone-mockup__image {
+                        height: auto;
+                        width: 80%
+                    };
+                };
+            };
+        };
+        
+    };
+}
+
+// X-Large devices (large desktops, 1200px and up "xl")
+@media (max-width: 1200px) {
+    .AboutComp {    
+        &::before {
+            content: "";
+            height: 40%;
+            width: 45%;
+        };
+    
+        .main__wrapper {
+            .about__wrapper {
+                .about-left__wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+    
+                    .phone-mockup__image {
+                        height: auto;
+                        width: 100%
+                    };
+                };
+            };
+        };  
+    };
+};
+
+// Large devices (desktops, 992px and up "lg")
+@media (max-width: 992px) {
+    .AboutComp {
+        // height: 800px;
+    
+        &::before {
+            content: "";
+            height: 35%;
+            width: 45%;
+            background: #f8f9ff;
+        };
+    
+        .main__wrapper {
+            .about__wrapper {
+    
+                .about-left__wrapper {
+                    padding-top: 30px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    .phone-mockup__image {
+                        height: auto;
+                        width: 130%
+                    };
+                };
+    
+                .about-right__wrapper {
+                    padding-left: 70px;
+    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+    
+                    .header__wrapper {
+                        .sub__title {
+                            font-family: 'Barlow', sans-serif;
+                            font-size: $fontSize;
+                            font-weight: 500;
+                            letter-spacing: 5px;
+                        };
+                        .title {
+                            font-family: 'Ubuntu', sans-serif;
+                            font-size: $heading;
+                            font-weight: 500
+                        };
+                    };
+    
+                    .about__paragraph {
+                        margin-top: 20px
+                    };
+    
+                    .mission-icon__wrapper, .vision-icon__wrapper {
+                        height: 55px;
+                        width: 55px;
+                        border-radius: 25px;
+    
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                        .mission-vision__icon {
+                            font-size: 3rem;
+                        };
+                    };
+                    .mission-icon__wrapper {
+                        background: rgba(144, 188, 238, 0.5);
+                    };
+                    .vision-icon__wrapper {
+                        background: rgba(255, 0, 0, 0.3);
+                    };
+    
+                    .mission-vision__body {
+                        .title {
+                            font-family: 'Ubuntu', sans-serif;
+                            font-size: $subHeading;
+                            font-weight: 500;
+                        };
+                    };
+                };
+            };
+        };
+        
+    };
+};
+
+// Medium devices (tablets, 768px and up "md")
+@media (max-width: 768px) {
+    .AboutComp {
+        &::before {
+            content: "";
+            height: 40%;
+            width: 60%;
+        };
+    
+        .main__wrapper {
+            .about__wrapper {
+    
+                .about-left__wrapper {
+                    display: none
+                };
+    
+                .about-right__wrapper {
+                    padding-left: 0;
+                };
+            };
+        };
+        
+    }; 
+};
+
+// Small devices (landscape phones, 576px and up "sm")
+@media (max-width: 576px) {};

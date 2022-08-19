@@ -1,0 +1,163 @@
+@import "../../../../assets/styles/GlobalStyle";
+
+.BannerComp {
+    height: calc($deviceHeight - 80px);
+    width: $fullWidth;
+    background: linear-gradient(rgba(0, 37, 36, 0.5), rgba(0, 37, 36, 0.5)),
+    url("../../../../assets/images/banner_bg.png") center no-repeat #004547cc;
+    background-size: cover;
+    border-radius: 0 0 30% 0;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 80px;
+    padding: 50px;
+
+    .banner-title__wrapper {
+        color: $colorWhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 50px;
+
+        .banner__title {
+            // font-family: 'Barlow', sans-serif;
+            font-size: 6rem;
+            font-weight: bold;
+        };
+        .banner__subTitle {
+            font-size: $subHeading;
+            font-weight: 300;
+            margin-top: 20px
+        };
+
+        .download-button__wrapper {
+            margin-top: 20px;
+
+            display: flex;
+            gap: 50px;
+
+            .playstore__button, .appstore__button {
+                background: $secondaryColor;
+                border: none;
+                border-radius: 8px;
+                color: $primaryColor;
+                padding: 10px 15px;
+
+                svg {
+                    font-size: 3rem;
+                };
+
+                span {
+                    font-size: $subHeading;
+                    font-weight: 500;
+                    margin-left: 5px;
+                };
+            };
+        };
+    };
+
+    .banner-image__wrapper {
+        display: flex;
+        justify-content: center;
+
+        .banner__image {
+            height: auto;
+            width: 100%;
+            background: url("../../../../assets/images/banner_image.png") center no-repeat;
+            background-size: contain;
+        };
+    };
+    
+};
+
+
+
+
+
+
+
+
+
+
+
+
+// XX-Large devices (larger desktops, 1400px and up "xxl")
+@media (max-width: 1400px) {  }
+
+// X-Large devices (large desktops, 1200px and up "xl")
+@media (max-width: 1200px) {  }
+
+// Large devices (desktops, 992px and up "lg")
+@media (max-width: 992px) {
+    .BannerComp {
+        .banner-title__wrapper {    
+            .banner__title {
+                font-size: 4.2rem;
+            };
+            .banner__subTitle {
+                font-size: $fontSize;
+            };
+    
+            .download-button__wrapper {
+                margin-top: 20px;
+                gap: 25px;
+    
+                .playstore__button, .appstore__button {    
+                    svg {
+                        font-size: 2rem;
+                    };
+                    span {
+                        font-size: $fontSize;
+                        font-weight: 500;
+                        margin-left: 5px;
+                    };
+                };
+            };
+        };
+    
+        .banner-image__wrapper {
+            .banner__image {
+                width: 100%;
+            };
+        };
+        
+    };
+};
+
+// Medium devices (tablets, 768px and up "md")
+@media (max-width: 768px) { 
+    .BannerComp {
+        .banner-title__wrapper {    
+            .banner__title {
+                font-size: 6rem;
+            };
+            .banner__subTitle {
+                font-size: $subHeading;
+            };
+    
+            .download-button__wrapper {
+                margin-top: 20px;
+                gap: 50px;
+    
+                .playstore__button, .appstore__button {    
+                    svg {
+                        font-size: 3rem;
+                    };
+                    span {
+                        font-size: $subHeading;
+                        font-weight: 500;
+                        margin-left: 5px;
+                    };
+                };
+            };
+        };
+    
+        .banner-image__wrapper {
+            display: none;
+        }; 
+    };
+};
+
+// Small devices (landscape phones, 576px and up "sm")
+@media (max-width: 576px) { 
+    
+};
